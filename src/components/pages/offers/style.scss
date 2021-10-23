@@ -1,0 +1,246 @@
+.carOffers{
+    
+.slider {
+    width: 100%;
+    height: 300px;
+  }
+  .slides {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    /* overflow-x: auto; */
+  }
+  .slide {
+    display: none;
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    background-color: brown;
+    font-size: 100px;
+    text-align: center;
+  }
+  
+  .page-container {
+    margin: 0px 200px;
+    min-height: 100%;
+  }
+  
+  /*flex row*/
+  .grid__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    color: black;
+    margin: 5px -24px;
+    align-items: stretch;
+  }
+  
+  /*column of flex-row*/
+  .grid__col {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 1.5%;
+    cursor: pointer;
+    flex: 1 0 25%;
+  }
+  
+  .icon:before {
+    padding-right: 5px;
+    speak-as: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: -2px;
+  }
+  
+  .teaser {
+    height: 100%;
+    position: relative;
+  }
+  
+  .teaser__image {
+    overflow: hidden;
+  }
+  
+  .teaser__image--cover {
+    height: 100%;
+  }
+  
+  .teaser__cover {
+    min-height: 380px;
+    height: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    transition: transform 3s;
+    width: 100%;
+  }
+  
+  .teaser__header {
+    height: 185px;
+    background: no-repeat center;
+    background-size: cover;
+    transition: transform 3s;
+    width: 100%;
+  }
+  
+  .grid__col:hover {
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .teaser:hover .teaser__header {
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.15);
+  }
+  
+  .teaser:hover .teaser__cover {
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari 3-8 */
+    transform: scale(1.15);
+  }
+  
+  .teaser__txt {
+    padding: 0 15px;
+  }
+  
+  .teaser__title {
+    top: 0px;
+    padding: 15px 0;
+  }
+  
+  .t-clr-primary {
+    color: #2387aa;
+  }
+  
+  .t-clr-secondary {
+    color: #788791;
+  }
+  
+  .teaser__title--cover {
+    position: absolute;
+    color: #fff;
+  }
+  
+  .teaser__type {
+    margin-right: 30px;
+  }
+  
+  .teaser__image-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .teaser__subtitle {
+    padding: 15px 0;
+  }
+  
+  .teaser__descr {
+    padding-bottom: 10px;
+  }
+  
+  /*ipad pro*/
+  @media (max-width: 1150px) {
+    .page-container {
+      margin: 0px 40px;
+    }
+  }
+  
+  /*ipad pro*/
+  @media (max-width: 775px) {
+    .page-container {
+      line-height: 1.2;
+    }
+  
+    .grid__col {
+      margin: 10px;
+    }
+
+  }
+  
+  @media (min-width: 501px) {
+    .teaser__body--cover {
+      position: absolute;
+      color: #fff;
+      bottom: 30px;
+    }
+  
+    /*jsut for drupal*/
+    /*not allowed in BEM only for this POC because its taking the h3 color from Q.press.css*/
+    .teaser__body--cover .teaser__subtitle {
+      color: #fff;
+    }
+  
+    article .content {
+      padding: 10px 0;
+      background-color: #dfe6ed;
+    }
+  }
+  
+  /*mobile*/
+  @media (max-width: 500px) {
+    body {
+      background: white;
+    }
+  
+    .grid .grid__row:last-child .grid__col:last-child {
+      border-bottom: none;
+    }
+  
+    .teaser__image-overlay {
+      visibility: hidden;
+    }
+  
+    .grid__row {
+      flex-direction: column;
+      margin: 0 -25px;
+    }
+  
+    .grid__col {
+      min-height: 0px;
+      margin: 0px 10px !important;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .teaser__image {
+      display: none;
+    }
+  
+    .teaser__title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: black;
+    }
+  
+    .teaser__title--cover {
+      position: relative;
+    }
+  
+    .teaser__descr {
+      display: none;
+    }
+  
+    .teaser__type {
+      color: #2387aa;
+    }
+  
+    .teaser__date {
+      color: #788791;
+    }
+  }
+  
+  
+}
