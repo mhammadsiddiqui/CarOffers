@@ -31,7 +31,6 @@ export default {
   *get car offer
   */
   getCarOffers() {
-      // const res = await apiClient.get("/codingtask/offers.json");
       return carOffers;
   },
 

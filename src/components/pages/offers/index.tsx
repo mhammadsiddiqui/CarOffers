@@ -14,21 +14,24 @@ const Offers: React.FunctionComponent = () => {
         getCarOffers();
     }, []);
 
+    //call api to get offers data
     const getCarOffers = () => {
         const res: IOffers = AjaxCallApi.getCarOffers();
         if (res) {
+            //filter only cars
             const availableCars: ICar[] = res.offers.filter(car => car.vehicleType === "car");
+            //dispatch to redux
             dispatch(update(availableCars));
         }
     };
 
+    //incase of corrupt image url
     const getFallBackImg = (ev: any) => {
         ev.target.src = fallBackImg;
     };
 
     return (
         <div className="carOffers">
-
             <div className="grid">
                 <h2>Sixt Car Offers</h2>
                 <div className="grid__row">
@@ -56,17 +59,11 @@ const Offers: React.FunctionComponent = () => {
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
-
                         );
                     })}
                 </div>
-
-
             </div>
-
         </div>
     );
 };
