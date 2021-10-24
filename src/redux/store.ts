@@ -1,8 +1,8 @@
 import { combineReducers, createStore } from 'redux';
-import counterReducer from './counter';
+import offersReducer from './offers';
 
 const rootReducer = combineReducers({
-  counter: counterReducer
+  offers: offersReducer
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

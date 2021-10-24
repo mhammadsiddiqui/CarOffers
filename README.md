@@ -1,10 +1,25 @@
-# Getting Started with Create React App
+# Sixt Car Offers App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Used Version
 
-In the project directory, you can run:
+![version](https://img.shields.io/badge/node-%4014.18.1-green)
+![version](https://img.shields.io/badge/react-%4017.0.2-blue)
+
+## Solution
+
+Solution|Author(s)
+--------|---------
+sixt.app.cars-offer | Author details (Hammad Siddiqui)
+
+## Minimal Path to Awesome
+
+- Clone this repository
+- Ensure that you are at the solution folder
+- in the command-line run:
+  - **npm install**
+  - **gulp serve**
 
 ### `npm start`
 

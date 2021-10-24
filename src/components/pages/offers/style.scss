@@ -1,29 +1,4 @@
 .carOffers{
-    
-.slider {
-    width: 100%;
-    height: 300px;
-  }
-  .slides {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    /* overflow-x: auto; */
-  }
-  .slide {
-    display: none;
-    width: 100%;
-    flex-shrink: 0;
-    height: 100%;
-    background-color: brown;
-    font-size: 100px;
-    text-align: center;
-  }
-  
-  .page-container {
-    margin: 0px 200px;
-    min-height: 100%;
-  }
   
   /*flex row*/
   .grid__row {
@@ -125,11 +100,6 @@
     color: #788791;
   }
   
-  .teaser__title--cover {
-    position: absolute;
-    color: #fff;
-  }
-  
   .teaser__type {
     margin-right: 30px;
   }
@@ -225,10 +195,6 @@
       color: black;
     }
   
-    .teaser__title--cover {
-      position: relative;
-    }
-  
     .teaser__descr {
       display: none;
     }
@@ -237,9 +203,6 @@
       color: #2387aa;
     }
   
-    .teaser__date {
-      color: #788791;
-    }
   }
   
   

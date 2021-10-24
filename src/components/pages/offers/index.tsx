@@ -1,11 +1,15 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AjaxCallApi from "../../../services/service";
 import fallBackImg from "../../../assets/img/fallback_car.png";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../redux/store';
+import { update } from '../../../redux/offers';
 
 const Offers: React.FunctionComponent = () => {
-    const [offers, setOffers] = useState<any[]>([]);
-
+    const dispatch = useDispatch();
+    const offers = useSelector((state: RootState) => state.offers);
+    
     useEffect(() => {
         getCarOffers();
     }, []);
@@ -14,7 +18,7 @@ const Offers: React.FunctionComponent = () => {
         const res: IOffers = AjaxCallApi.getCarOffers();
         if (res) {
             const availableCars: ICar[] = res.offers.filter(car => car.vehicleType === "car");
-            setOffers(availableCars);
+            dispatch(update(availableCars));
         }
     };
 
@@ -28,7 +32,7 @@ const Offers: React.FunctionComponent = () => {
             <div className="grid">
                 <h2>Sixt Car Offers</h2>
                 <div className="grid__row">
-                    {offers.map((car: ICar, index: number) => {
+                    {offers.offers.map((car: ICar, index: number) => {
                         return (
                             <div key={car.id + "__" + index} className="grid__col">
                                 <div className="teaser">
@@ -40,7 +44,7 @@ const Offers: React.FunctionComponent = () => {
                                     </div>
                                     <div className="teaser__txt">
                                         <div className="teaser__title">
-                                            <span className="teaser__type t-clr-primary icon icon-feature">Sixt</span>
+                                            <span className="teaser__type t-clr-primary icon">Sixt</span>
                                             <span className="teaser__date t-clr-secondary">{car.carGroupInfo.bodyStyle}</span>
                                         </div>
                                         <div className="teaser__body">

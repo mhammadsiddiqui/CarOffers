@@ -1,5 +1,4 @@
 interface IOffers {
-   info: Object;
    offers: ICar[]; 
 }
 
