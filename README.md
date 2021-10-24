@@ -59,3 +59,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Why ?
+
+-'Axios'
+  This package is used to make promise-based request. Although I got CORS errors on trying to fetch data. So I saved the data as a json file ‘carOffers.json’. 
+  But I left the implementation as it is to show how I intended to get data.
+-'sweetalert2'
+  This package is used to show alert box in case of error on fetching data. So, user knows if network request was failed.
+-'Bootstrap, reactstrap'
+  This packages are used for styling of navigation tabs and layout.
+

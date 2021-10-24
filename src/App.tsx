@@ -7,6 +7,7 @@ import TaskQ from './components/pages/task';
 
 function App() {
   return (
+    //calling layout component
     <Layout>
           <Route exact path='/' component={Home} />
           <Route path='/task' component={TaskQ} />
