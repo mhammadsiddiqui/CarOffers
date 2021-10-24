@@ -19,7 +19,7 @@ sixt.app.cars-offer | Author details (Hammad Siddiqui)
 - Ensure that you are at the solution folder
 - in the command-line run:
   - **npm install**
-  - **gulp serve**
+  - **npm start**
 
 ### `npm start`
 
