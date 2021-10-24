@@ -7,31 +7,25 @@ const apiClient = axios.create({
   baseURL: 'http://cdn.sixt.io',
   headers: {
     Accept: 'application/json',
-    'content-type': 'application/json'
+    'content-type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
   },
 });
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
 
-  // /**
-  // *get car offer
-  // */
-  // async getCarOffers() {
-  //   try {
-  //     // const res = await apiClient.get("/codingtask/offers.json");
-  //     return await carOffers;
-  //   }
-  //   catch (error: any) {
-  //     showSweetAlert(error);
-  //   }
-  // },
-
-    /**
+  /**
   *get car offer
   */
-  getCarOffers() {
+  async getCarOffers() {
+    try {
+      return await apiClient.get("/codingtask/offers.json") as IOffers;
+    }
+    catch (error: any) {
+      showSweetAlert(error);
       return carOffers;
+    }
   },
 
 
