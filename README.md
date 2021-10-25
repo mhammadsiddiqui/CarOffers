@@ -11,9 +11,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Solution|Author(s)
 --------|---------
-sixt.app.cars-offer | Author details (Hammad Siddiqui)
+Sixt.CarOffers | Author details (Hammad Siddiqui)
 
-## Minimal Path to Awesome
+## `Minimal Path to Awesome`
 
 - Clone this repository
 - Ensure that you are at the solution folder (i.e. cd Sixt.CarOffers)
