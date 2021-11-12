@@ -1,32 +1,34 @@
-
 interface IOffersState {
-    offers: ICar[];
+  offers: ICar[];
 }
 
 const initialState: IOffersState = {
-    offers: []
-}
+  offers: [],
+};
 
 //action
 interface UpdateAction {
-    type: 'offers/update',
-    payload: ICar[]
-};
+  type: "offers/update";
+  payload: ICar[];
+}
 
 //action creator
 export const update = (data: ICar[]): UpdateAction => ({
-    type: 'offers/update',
-    payload: data
+  type: "offers/update",
+  payload: data,
 });
 
-const offersReducer = (state: IOffersState = initialState, action: UpdateAction) => {
-    switch (action.type) {
-        case 'offers/update':
-            return { offers: action.payload };
-        default:
-            // the dispatched action is not in this reducer, return the state unchanged
-            return state;
-    }
+const offersReducer = (
+  state: IOffersState = initialState,
+  action: UpdateAction
+): IOffersState => {
+  switch (action.type) {
+    case "offers/update":
+      return { offers: action.payload };
+    default:
+      // the dispatched action is not in this reducer, return the state unchanged
+      return state;
+  }
 };
 
 export default offersReducer;
