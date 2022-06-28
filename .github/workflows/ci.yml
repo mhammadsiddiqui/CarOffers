@@ -25,4 +25,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: bash <(curl -s -L https://detect.synopsys.com/detect7.sh) --blackduck.url=https://myblackduck.synopsys.com/ --blackduck.api.token=NmMyODRhMTYtZTI1OC00N2U0LWEyMTYtNTFkNDEzZmY2MzljOmU5ZDZjMWViLTMyMjctNDg4Yi05OGY0LWEyOGZmODdmMTVmOA== --detect.project.name=Sixt_GithubActions --detect.project.version.name=0.1 --blackduck.trust.cert=true
+    - run: bash <(curl -s -L https://detect.synopsys.com/detect7.sh) --blackduck.url=https://52.29.53.171/ --blackduck.api.token=NmMyODRhMTYtZTI1OC00N2U0LWEyMTYtNTFkNDEzZmY2MzljOmU5ZDZjMWViLTMyMjctNDg4Yi05OGY0LWEyOGZmODdmMTVmOA== --detect.project.name=Sixt_GithubActions --detect.project.version.name=0.1 --blackduck.trust.cert=true
