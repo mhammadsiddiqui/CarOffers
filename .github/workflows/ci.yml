@@ -30,6 +30,6 @@ jobs:
         --blackduck.url=${{secrets.BD_URL}} \
         --blackduck.api.token=${{secrets.BD_TOKEN}} \
         --detect.project.name=Sixt_GithubActions \
-        --detect.project.version.name=0.1 \
+        --detect.project.version.name=0.2 \
         --blackduck.trust.cert=true \
         ...
