@@ -27,8 +27,8 @@ jobs:
     - run: npm ci
     - run: | 
         bash <(curl -s -L https://detect.synopsys.com/detect7.sh) 
-        --blackduck.url=${{BD_URL}} 
-        --blackduck.api.token=${{BD_TOKEN}} 
+        --blackduck.url=${{secrets.BD_URL}} 
+        --blackduck.api.token=${{secrets.BD_TOKEN}} 
         --detect.project.name=Sixt_GithubActions 
         --detect.project.version.name=0.1 
         --blackduck.trust.cert=true
