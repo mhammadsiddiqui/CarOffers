@@ -23,7 +23,7 @@ steps:
 
 - task: SynopsysDetectTask@7
   inputs:
-    BlackDuckService: 'Blackduck_ADO'
+    BlackDuckService: 'Blackduck-ADO'
     DetectArguments: |
       --detect.project.name=Sixt-Offer
       --detect.project.version=0.4
