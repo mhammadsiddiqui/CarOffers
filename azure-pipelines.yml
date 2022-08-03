@@ -25,6 +25,6 @@ steps:
     BlackDuckService: 'Blackduck-ADO'
     DetectArguments: |
       --detect.project.name=Sixt-Offer
-      --detect.project.version.name=0.4
+      --detect.project.version.name=0.5
       --blackduck.trust.cert=true
     DetectVersion: 'latest'
