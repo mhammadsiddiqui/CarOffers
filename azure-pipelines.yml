@@ -1,4 +1,3 @@
-
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -22,7 +21,7 @@ steps:
 
 - task: SynopsysDetectTask@7
   inputs:
-    BlackDuckService: 'Blackduck-ADO'
+    BlackDuckService: 'Blackduck-Azure'
     DetectArguments: |
       --detect.project.name=Sixt-Offer
       --detect.project.version.name=0.5
