@@ -28,8 +28,8 @@ jobs:
     - run: npm ci
     - run: | 
         bash <(curl -s -L https://detect.synopsys.com/detect7.sh) \
-        --blackduck.url= ${{secret.BD_URL}} \
-        --blackduck.api.token= ${{secret.BD_TOKEN}} \
+        --blackduck.url= ${{secrets.BD_URL}} \
+        --blackduck.api.token= ${{secrets.BD_TOKEN}} \
         --detect.project.name=Car_GithubActions \
         --detect.project.version.name=Development-Head \
         --blackduck.trust.cert=true \
