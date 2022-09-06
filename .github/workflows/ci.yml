@@ -30,7 +30,7 @@ jobs:
         bash <(curl -s -L https://detect.synopsys.com/detect7.sh) \
         --blackduck.url=${{secrets.BD_URL}} \
         --blackduck.api.token=${{secrets.BD_TOKEN}} \
-        --detect.project.name=Sixt_GithubActions \
-        --detect.project.version.name=0.2 \
+        --detect.project.name=Car_GithubActions \
+        --detect.project.version.name=Development-Head \
         --blackduck.trust.cert=true \
         ...
