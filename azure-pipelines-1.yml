@@ -8,14 +8,7 @@ trigger:
 
 pool:
   vmImage: windows-latest
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-
+  
 - task: SynopsysDetectTask@8
   inputs:
     BlackDuckService: 'Blackduck-Azure'
@@ -24,6 +17,13 @@ steps:
       --detect.project.version.name=Azure-Devops detect.code.location.name=CarOffers_Azure-Devops
       --blackduck.trust.cert=true
     DetectVersion: 'latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
 
 - script: |
     npm install
