@@ -19,12 +19,22 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: SynopsysDetectTask@7
+# - task: SynopsysDetectTask@7
+#   inputs:
+#     BlackDuckService: 'Blackduck-Azure'
+#     DetectArguments: |
+#       --detect.project.name=Sixt-Offer
+#       --detect.project.version.name=0.5
+#       --detect.code.location.
+#       --blackduck.trust.cert=true
+#     DetectVersion: 'latest'
+
+- task: SynopsysDetectTask@8
   inputs:
     BlackDuckService: 'Blackduck-Azure'
     DetectArguments: |
-      --detect.project.name=Sixt-Offer
-      --detect.project.version.name=0.5
-      --detect.code.location.
-      --blackduck.trust.cert=true
+      detect.project.name=CarOffers
+      detect.project.version.name=Azure-Devops
+      detect.code.location.name=CarOffers_Azure-Devops
+      blackduck.trust.cert=true
     DetectVersion: 'latest'
