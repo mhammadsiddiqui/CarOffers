@@ -14,7 +14,8 @@ pool:
     BlackDuckService: 'Blackduck-Azure'
     DetectArguments: |
       --detect.project.name=CarOffers
-      --detect.project.version.name=Azure-Devops detect.code.location.name=CarOffers_Azure-Devops
+      --detect.project.version.name=Azure-Devops 
+      --detect.code.location.name=CarOffers_Azure-Devops
       --blackduck.trust.cert=true
     DetectVersion: 'latest'
 
