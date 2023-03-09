@@ -14,11 +14,6 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-
 - task: SynopsysDetectTask@8
   inputs:
     BlackDuckService: 'Blackduck-Azure'
@@ -39,3 +34,7 @@ steps:
 #       --blackduck.trust.cert=true
 #     DetectVersion: 'latest'
 
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
