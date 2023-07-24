@@ -33,7 +33,7 @@ jobs:
     - name: Run Synopsys Detect
       uses: synopsys-sig/detect-action@v0.3.0
       with:
-          # github-token: ${{ secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN}}
           detect-version: 8.10.0
-          blackduck-url: ${{ secrets.BLACKDUCK_URL }}
-          blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN}}
+          blackduck-url: ${{ secrets.BD_URL }}
+          blackduck-api-token: ${{ secrets.BD_TOKEN}}
