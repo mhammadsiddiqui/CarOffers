@@ -35,6 +35,7 @@ jobs:
       uses: synopsys-sig/synopsys-action@v1.2.0
       env:
         DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
+        BLACKDUCK_trust_cert: true
       with:
           blackduck_url: ${{ secrets.BD_URL }}
           blackduck_apiToken: ${{ secrets.BD_TOKEN }}
