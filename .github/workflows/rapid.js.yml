@@ -36,13 +36,11 @@ jobs:
       env:
         DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
       with:
-          github-token: ${{ secrets.GH_TOKEN}}
-          detect-version: 8.10.0
-          blackduck-url: ${{ secrets.BD_URL }}
-          blackduck-api-token: ${{ secrets.BD_TOKEN}}
+          blackduck_url: ${{ secrets.BD_URL }}
+          blackduck_apiToken: ${{ secrets.BD_TOKEN }}
           blackduck_scan_full: false
           ### Below configuration is used to enable automatic pull request comment based on Black Duck scan result
           blackduck_automation_prcomment: true
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_prcomment is set to 'true'
+          github_token: ${{ secrets.GH_TOKEN }} # Mandatory when blackduck_automation_prcomment is set to 'true'
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
           # include_diagnostics: true
