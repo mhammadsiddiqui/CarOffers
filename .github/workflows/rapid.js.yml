@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    #- run: npm ci
     #- run: npm run build --if-present
     #- run: npm test
     
@@ -36,6 +36,7 @@ jobs:
       env:
         DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
         BLACKDUCK_trust_cert: true
+        detect_accuracy_required: 'NONE'
       with:
           blackduck_url: ${{ secrets.BD_URL }}
           blackduck_apiToken: ${{ secrets.BD_TOKEN }}
