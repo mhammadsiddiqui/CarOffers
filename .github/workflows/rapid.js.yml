@@ -36,7 +36,7 @@ jobs:
       env:
         DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
       with:
-          github-token: ${{ secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GH_TOKEN}}
           detect-version: 8.10.0
           blackduck-url: ${{ secrets.BD_URL }}
           blackduck-api-token: ${{ secrets.BD_TOKEN}}
