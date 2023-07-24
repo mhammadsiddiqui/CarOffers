@@ -30,10 +30,19 @@ jobs:
     #- run: npm run build --if-present
     #- run: npm test
     
-    - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.3.0
+    - name: Run Synopsys Detect PR Scan
+      #uses: synopsys-sig/detect-action@v0.3.0
+      uses: synopsys-sig/synopsys-action@v1.2.0
+      env:
+        DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
       with:
           github-token: ${{ secrets.GITHUB_TOKEN}}
           detect-version: 8.10.0
           blackduck-url: ${{ secrets.BD_URL }}
           blackduck-api-token: ${{ secrets.BD_TOKEN}}
+          blackduck_scan_full: false
+          ### Below configuration is used to enable automatic pull request comment based on Black Duck scan result
+          blackduck_automation_prcomment: true
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_prcomment is set to 'true'
+          ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: true
