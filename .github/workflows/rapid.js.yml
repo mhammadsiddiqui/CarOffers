@@ -31,12 +31,12 @@ jobs:
     #- run: npm test
     
     - name: Run Synopsys Detect PR Scan
-      #uses: synopsys-sig/detect-action@v0.3.0
       uses: synopsys-sig/synopsys-action@v1.2.0
       env:
         DETECT_PROJECT_NAME: 'GithubAction-CarOffers'
         BLACKDUCK_trust_cert: true
         detect_accuracy_required: 'NONE'
+        detect_blackduck_rapid_compare_mode: 'NONE'
       with:
           blackduck_url: ${{ secrets.BD_URL }}
           blackduck_apiToken: ${{ secrets.BD_TOKEN }}
