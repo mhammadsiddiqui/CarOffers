@@ -14,6 +14,11 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
 - task: SynopsysDetectTask@9
   inputs:
     BlackDuckService: 'Blackduck-Azure'
@@ -23,8 +28,3 @@ steps:
       --detect.code.location.name=CarOffers_Azure-Devops
       --blackduck.trust.cert=true
     DetectVersion: 'latest'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
