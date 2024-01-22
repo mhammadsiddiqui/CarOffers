@@ -23,10 +23,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
-      powershell "[Net.ServicePointManager]::SecurityProtocol = 'tls12'; irm https://detect.synopsys.com/detect9.ps1?$Random  | iex; detect" 
-      --blackduck.url=https://20.79.228.250/  
-      --blackduck.api.token=YjgyYjFlZDUtYmE0NS00YWJkLTllNzQtZmFlYzBkOTkwY2Q3OjMxYTM3YTNhLWVmNGUtNDI1Yi04MTVmLTg4YzhjOWVmYTdjZg==
-      --detect.tools=DETECTOR
-      --detect.accuracy.required=NONE
-      --blackduck.trust.cert=true
+      powershell "[Net.ServicePointManager]::SecurityProtocol = 'tls12'; irm https://detect.synopsys.com/detect9.ps1?$Random  | iex; detect" --blackduck.url=https://20.79.228.250/ --blackduck.api.token=YjgyYjFlZDUtYmE0NS00YWJkLTllNzQtZmFlYzBkOTkwY2Q3OjMxYTM3YTNhLWVmNGUtNDI1Yi04MTVmLTg4YzhjOWVmYTdjZg== --detect.tools=DETECTOR --detect.accuracy.required=NONE --blackduck.trust.cert=true
   displayName: 'Black Duck Script'
