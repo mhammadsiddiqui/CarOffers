@@ -2,9 +2,6 @@ pipeline {
     agent {
         docker {image 'node:22-alpine3.21'}
     }
-    environment {
-        CI = 'true'
-    }
     stages {
         stage('Build'){
             steps {
