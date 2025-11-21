@@ -1,4 +1,4 @@
-# Sixt Car Offers App
+# Offers App
 
 ## Used Version
 
@@ -9,12 +9,12 @@
 
 Solution|Author(s)
 --------|---------
-Sixt.CarOffers | Author details (Hammad Siddiqui)
+CarOffers | Author details (Hammad Siddiqui)
 
 ## `Minimal Path to Awesome`
 
 - Clone this repository
-- Ensure that you are at the solution folder (i.e. cd Sixt.CarOffers)
+- Ensure that you are at the solution folder (i.e. cd CarOffers)
 - in the command-line run:
   - **npm install**
   - **npm start**
