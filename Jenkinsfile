@@ -1,5 +1,8 @@
 pipeline {
-    agent { docker {image 'node:22-alpine'}}
+    agent { 
+        docker {
+            image 'node:22-alpine'}
+    }
     stages {
         /*stage('pre-req') {
             steps {                
@@ -9,7 +12,9 @@ pipeline {
         }*/
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                /*sh 'npm install'*/
+                sh 'node -v'
+                sh 'npm -v'
             }
         }
     }
