@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+    agent { docker {image 'node:22-alpine'}}
     stages {
-        stage('pre-req') {
+        /*stage('pre-req') {
             steps {                
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get install -y nodejs npm'
             }
-        }
+        }*/
         stage('Build') { 
             steps {
                 sh 'npm install' 
