@@ -17,7 +17,11 @@ pipeline {
       }
       stage('SCA Rapid Scan') {
          steps {
-            sh 'bash -c "$(curl -s -L https://detect.blackduck.com/detect.sh)" --detect.diagnostic=true --blackduck.api.token=$BD_TOKEN --blackduck.url=$BD_URL --detect.project.name=CarOffers --detect.project.version.name=JenkinsPipeline'
+            sh '''
+            bash -c "$(curl -s -L https://detect.blackduck.com/detect.sh)" \\
+            --detect.diagnostic=true --blackduck.api.token=$BD_TOKEN --blackduck.url=$BD_URL --detect.project.name=CarOffers --detect.project.version.name=JenkinsPipeline' \\
+            --detect.code.location.name=CarOffers_JenkinsPipeline
+            '''
          }
       }
    }
