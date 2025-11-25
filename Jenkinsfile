@@ -11,7 +11,12 @@ pipeline {
       }
       stage('SCA Rapid Scan') {
          steps {
-            sh 'bash <(curl -s -L https://detect.blackduck.com/detect.sh) --blackduck.url=https://expressonboarding.app.blackduck.com/ --blackduck.api.token=$BD_TOKEN --detect.blackduck.scan.mode=RAPID'
+            sh '''
+               bash -c "$(curl -s -L https://detect.blackduck.com/detect.sh)" \
+               --blackduck.url=https://expressonboarding.app.blackduck.com/ \
+               --blackduck.api.token=$BD_TOKEN \ 
+               --detect.blackduck.scan.mode=RAPID
+            '''
          }
       }
    }
