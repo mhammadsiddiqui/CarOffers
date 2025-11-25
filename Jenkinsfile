@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment { 
-      BD_TOKEN = credentials('BD_TOKEN')
+      BD_TOKEN = credentials('bd_token')
       BD_URL = credentials('BD_URL')
    }
    tools {
