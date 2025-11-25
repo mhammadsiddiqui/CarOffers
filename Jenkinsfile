@@ -1,12 +1,15 @@
 pipeline {
    agent any
    environment { BD_TOKEN = credentials('bd_token') }
+   tools {
+      nodejs 'NodeJS_22'
+   }
    stages {
-      stage('List Current Directory') {
+      stage('Check pre-req') {
          steps {
-            sh 'pwd'
-            sh 'ls -la'
-            sh 'echo $BD_TOKEN'
+            sh 'node -v'
+            sh 'npm -v'
+            sh 'java --version'
          }
       }
       stage('SCA Rapid Scan') {
