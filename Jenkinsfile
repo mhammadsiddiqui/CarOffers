@@ -19,7 +19,7 @@ pipeline {
                --blackduck.url=https://expressonboarding.app.blackduck.com/ \\
                --blackduck.api.token=$BD_TOKEN \\ 
                --detect.diagnostic=true \\
-               --detect.project.name= CarOffers --detect.project.version.name=JenkinsPipeline
+               --detect.project.name=CarOffers --detect.project.version.name=JenkinsPipeline
             '''
          }
       }
