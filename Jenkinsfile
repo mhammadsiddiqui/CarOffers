@@ -20,7 +20,7 @@ pipeline {
             sh '''
             curl -s -L https://detect.blackduck.com/detect.sh -o detect.sh
             bash detect.sh --blackduck.api.token=$BD_TOKEN --blackduck.url=$BD_URL \\
-            --detect.project.name=CarOffers --detect.project.version.name=JenkinsPipeline \\
+            --detect.project.name=JenkinsPipeline --detect.project.version.name=CarOffers \\
             --detect.code.location.name=CarOffers_JenkinsPipeline
             '''
          }
