@@ -18,7 +18,7 @@ pipeline {
                bash -c "$(curl -s -L https://detect.blackduck.com/detect.sh)" \\
                --blackduck.url=https://expressonboarding.app.blackduck.com/ \\
                --blackduck.api.token=$BD_TOKEN \\ 
-               --detect.blackduck.scan.mode=RAPID
+               --detect.blackduck.scan.mode=RAPID --detect.diagnostic=true
             '''
          }
       }
